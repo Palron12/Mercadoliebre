@@ -7,7 +7,7 @@ const app = express();
 app.use(express.static(publicPath));
 
 app.listen(process.env.PORT || 3030, () => {
-    console.log("Server corriendo en el puerto:", PORT);
+    console.log("Server corriendo en el puerto 3030");
 });
 
 app.get("/", (req, res) => {
