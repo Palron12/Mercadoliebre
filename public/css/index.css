@@ -24,6 +24,8 @@
 #nav-top p {
   font-size: 1rem;
   padding: 15px;
+  display: flex;
+  align-items: center;
 }
 
 #busqueda {
@@ -183,6 +185,17 @@ footer {
     margin: 8% 5%;
   }
   /* Media Query*/
+  @media (min-width: 1100px ){
+    #nav-top img {
+      width: 33%;
+    }
+    #nav-top p {
+      width: 33%;
+    }
+    #busqueda {
+      width: 33%;
+    }
+  }
   @media (min-width: 830px) {
     .icon {
       transition: 1500ms;
