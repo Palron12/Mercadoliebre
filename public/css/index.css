@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto";
+  margin: 0;
+  padding: 0;
+}
+
+#nav {
+  background-color: #eac926;
+  padding: 20px;
+}
+#nav-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#nav-top img {
+  width: 50%;
+  padding: 20px;
+  justify-content: space-around;
+}
+#nav-top p {
+  font-size: 1rem;
+  padding: 15px;
+}
+
+#busqueda {
+  width: 50%;
+  display: flex;
+  align-self: center;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+#busqueda input {
+  width: 80%;
+}
+#busqueda i {
+  position: absolute;
+  right: 12%;
+  font-size: 0.9rem;
+  color: #666;
+  z-index: 2;
+}
+#barra-nav{
+    display:flex;
+    justify-content: space-between;
+}
+#nav #nav1 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+  margin: 5px auto;
+  padding: 5px;
+}
+
+.burger-menu {
+  background-color: #1259c3;
+  color: white;
+  font-size: 20px;
+  border-radius: 3px;
+  padding: 4px 8px;
+  display: inline-block;
+  align-items: center;
+}
+#nav a:hover{
+    background-color: #ebebeb;
+    color:#1259c3;;
+    cursor: pointer;
+}
+
+/* Main */
+body{
+   background-color: #ebebeb;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.articulos {
+    display: flex;
+    flex-direction: column;
+}
+
+.banner img{
+    width: 100%;
+}
+.card{
+    margin: 10px;
+    width: 80vw;
+    background-color: white;
+}
+
+.card img{
+    width: 100%;
+  
+}
+
+#card{
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+    width: 100%;
+    position: relative;
+    
+}
+.card-icon {
+    display: block;
+    border-radius: 50%;
+    color: #39d54a;
+    padding: 5px;
+    border: 1px solid #39d54a;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+.card-descuento{
+    color: #39d54a;
+    font-size: 16px;
+}
+
+.descripcion{
+    font-size: 16px;
+}
+
+/*Footer*/
+footer {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+  }
+  .icon {
+    margin-bottom: 5%;
+    color: #1259c3;
+    font-size: 2em;
+  }
+  .footerItem {
+    margin: 8% 5%;
+  }
+  /* Media Query*/
+  @media (min-width: 830px) {
+    .articulos {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .card .card-desc {
+      display: block;
+    }
+    .burger-menu {
+      display: none;
+    }
+    .card {
+      box-shadow: 0px 0px 10px rgb(100, 100, 100);
+      width: 35vw;
+    }
+    .navbar-bottom {
+      display: block;
+    }
+  }
+  
+  @media (min-width: 1279px) {
+    .card {
+      width: 20vw;
+    }
+    .footerContent {
+      display: flex;
+      flex-direction: row;
+    }
+    .footerItem {
+      width: 30%;
+    }
+    .navbar-logo {
+      width: 30%;
+    }
+    .navbar-searchArea {
+      width: 30%;
+    }
+    .navbar-top p {
+      width: 30%;
+      align-self: center;
+    }
+  }
