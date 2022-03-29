@@ -96,6 +96,31 @@ main {
 
 .banner img{
     width: 100%;
+    text-shadow: 2px 2px 1px black;
+    animation: showText 10s linear;
+    overflow: hidden;
+}
+@keyframes showText{
+  0%{
+    transform: translateX(-600%) scale(3,3);
+    opacity: 1;
+}
+50%{
+    transform: translateX(600%) scale(3,3);
+    opacity: 1;
+}
+75%{
+    transform: translateX(-600%) scale(3,3);
+    text-shadow:none;
+    color: transparent;
+    opacity: 0;
+}
+100%{
+    transform: translateX(0%) scale(1,1);
+    opacity: 1;
+    text-shadow: 2px 2px 1px black;
+    
+}
 }
 .card{
     margin: 10px;
@@ -124,6 +149,10 @@ main {
     position: absolute;
     right: 20px;
     top: -15px;
+    transition: 500ms;
+}
+.card-icon:hover{
+  transform: rotate(-90deg);
 }
 .card-descuento{
     color: #39d54a;
@@ -155,24 +184,37 @@ footer {
   }
   /* Media Query*/
   @media (min-width: 830px) {
+    .icon {
+      transition: 1500ms;
+    }
+    .icon:hover {
+      color: #0022aa;
+    }
     .articulos {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
     }
     .card .card-desc {
+      transition: 2500ms;
+    }
+    .card:hover .card-desc {
       display: block;
     }
     .burger-menu {
       display: none;
     }
     .card {
-      box-shadow: 0px 0px 10px rgb(100, 100, 100);
       width: 35vw;
+      transition: 500ms;
+    }
+    .card:hover {
+      box-shadow: 0px 5px 10px rgba(100, 100, 100, 0.5);
     }
     .navbar-bottom {
       display: block;
     }
+    
   }
   
   @media (min-width: 1279px) {
@@ -186,7 +228,7 @@ footer {
     .footerItem {
       width: 30%;
     }
-    .navbar-logo {
+    .contenedor-logo {
       width: 30%;
     }
     .navbar-searchArea {
